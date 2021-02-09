@@ -1,0 +1,45 @@
+﻿List of Employees
+
+@model System.Data.DataTable
+@{
+    ViewBag.Title = "ListEmployee";
+
+}
+<table class="table table-bordered table-striped">
+    <tr>
+        <th> empId</th>
+        <th> empName</th>
+        <th> deptName</th>
+        <th> Edit</th>
+        <th> Delete</th>
+        
+    </tr>
+
+    @for (int i = 0; i < Model.Rows.Count; i++)
+    {
+<tr>
+    <td>
+        <a href=" @Url.Action("onclick","EmpDetail1", new {@id = Model.Rows[i][0]})">@Model.Rows[i][0]</a>
+    </td>
+
+    <td>@Model.Rows[i][1]</td>
+    <td>@Model.Rows[i][2]</td>
+
+    @*<td>@Model.Rows[i][2]</td>*@
+    <td>
+        <a href=" @Url.Action("Edit","newEmp", new {@id = Model.Rows[i][0]})">Edit</a>
+    </td>
+
+    <td>
+        <a href=" @Url.Action("Delete","newEmp", new {@id = Model.Rows[i][0]})">Delete</a>
+    </td>
+
+
+
+</tr>
+
+    }
+</table>
+<a href=" @Url.Action("Create","newEmp")">Add Employee</a><br />
+@*<a href=" @Url.Action("Edit","newEmp")">Edit Employee</a><br />
+<a href=" @Url.Action("Delete","newEmp")">Delete Employee</a>*@

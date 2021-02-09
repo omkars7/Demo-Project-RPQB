@@ -1,0 +1,45 @@
+﻿List of Department
+
+@model System.Data.DataTable
+@{
+    ViewBag.Title = "ListDepartment";
+
+}
+<table class="table table-bordered table-striped">
+    <tr>
+        @*<th> EmpNo</th>*@
+        <th> DeptId</th>
+        <th> DeptName</th>
+        <th> Edit</th>
+        <th> Delete</th>
+    </tr>
+
+    @for (int i = 0; i < Model.Rows.Count; i++)
+    {
+<tr>
+    <!--<!--<td>-->
+    <!--@*<a href="@Url.Action("Index", "Information", new { @id = @Model.Rows[i][0] })">*@--> <!--<!----><!--@*</a>*@-->
+    <!--</td>-->
+
+    <td>@Model.Rows[i][0]</td>
+    <td>@Model.Rows[i][1]</td>
+    @*<td>@Model.Rows[i][2]</td>*@
+
+    <td>
+        <a href=" @Url.Action("Edit","DepartmentController1", new {@id = Model.Rows[i][0]})">Edit</a>
+    </td>
+    <td>
+        <a href=" @Url.Action("Delete","DepartmentController1", new {@id = Model.Rows[i][0]})">Delete</a>
+    </td>
+   
+
+</tr>
+
+    }
+</table>
+<a href=" @Url.Action("CreateDepartment","DepartmentController1")">Add Department</a>
+
+
+
+
+

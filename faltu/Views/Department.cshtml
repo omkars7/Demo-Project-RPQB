@@ -1,0 +1,16 @@
+﻿@using CrudMVCADO.Models;
+
+@model IEnumerable<Department>
+
+@{ ViewBag.Title = "Departments List"; }
+
+<div style="font-family:Arial"></div>
+<h2>Departments List</h2>
+
+<ul>
+    @foreach (Department department in @Model)
+    {
+<li>
+   @*@Html.ActionLink(department.deptName, "Index", "Employee", new { departmentId = department.deptId }, null)*@
+</li>}
+</ul>
