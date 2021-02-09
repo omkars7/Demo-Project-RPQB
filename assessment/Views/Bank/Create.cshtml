@@ -1,0 +1,70 @@
+﻿@model CrudMVCADO.Models.BankDetail
+
+<h4>BankDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="bankName" class="control-label"></label>
+                <input asp-for="bankName" class="form-control" />
+                <span asp-validation-for="bankName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="accNo" class="control-label"></label>
+                <input asp-for="accNo" class="form-control" />
+                <span asp-validation-for="accNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="basicSal" class="control-label"></label>
+                <input asp-for="basicSal" class="form-control" />
+                <span asp-validation-for="basicSal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hRA" class="control-label"></label>
+                <input asp-for="hRA" class="form-control" />
+                <span asp-validation-for="hRA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="otherAllowances" class="control-label"></label>
+                <input asp-for="otherAllowances" class="form-control" />
+                <span asp-validation-for="otherAllowances" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="pF" class="control-label"></label>
+                <input asp-for="pF" class="form-control" />
+                <span asp-validation-for="pF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="medicalPremium" class="control-label"></label>
+                <input asp-for="medicalPremium" class="form-control" />
+                <span asp-validation-for="medicalPremium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tDS" class="control-label"></label>
+                <input asp-for="tDS" class="form-control" />
+                <span asp-validation-for="tDS" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="empId" class="control-label"></label>
+                <input asp-for="empId" class="form-control" />
+                <span asp-validation-for="empId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListBankDetail">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

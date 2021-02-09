@@ -1,0 +1,53 @@
+﻿List of Employees
+
+@model System.Data.DataTable
+@{ ViewBag.Title = "ListEmployee"; }
+<table class="table table-bordered table-striped">
+    <tr>
+        <th> EmpDetailid</th>
+        <th> Empid</th>
+        <th> EmpName</th>
+        <th> DateOfbirth</th>
+        <th> DateOfJoining</th>
+        <th> Designation</th>
+        <th> Degree</th>
+        <th> Passoutyear</th>
+        <th>GrossSalary</th>
+        <th>NetSalary</th>
+
+    </tr>
+
+    @for (int i = 0; i < Model.Rows.Count; i++) 
+    {
+<tr>
+    
+    
+    <td>@Model.Rows[i][0]</td>
+    <td>@Model.Rows[i][1]</td>
+    <td>@Model.Rows[i][2]</td>
+    <td>@Model.Rows[i][3]</td>
+    <td>@Model.Rows[i][4]</td>
+    <td>@Model.Rows[i][5]</td>
+    <td>@Model.Rows[i][6]</td>
+    <td>@Model.Rows[i][7]</td>
+    <td>
+        <a href="@Url.Action("ShowGrossSalary","Bank", new { @id = @Model.Rows[i][0]})"> @Model.Rows[i][8]</a>
+    </td>
+    <td>
+        <a href="@Url.Action("ShowNetSalary","Bank", new { @id = @Model.Rows[i][0]})"> @Model.Rows[i][9]</a>
+    </td>
+
+    @*<td>
+            <a href="@Url.Action("DeleteEmployeeDetails","EmpDetails",new { @id = @Model.Rows[i][0]})">Delete</a>
+
+        </td>
+        <td>
+            <a href="@Url.Action("EditEmpDetail","EmpDetails",new { @id = @Model.Rows[i][0]})">Edit</a>
+
+        </td>*@
+
+</tr>}
+</table>
+@*<a href=" @Url.Action("CreateEmployeeDetail","EmpDetails")">Add Employee Details</a>
+    <br />
+    <a href=" @Url.Action("EditEmpDetail","EmpDetails")">Update Employee Details</a>*@

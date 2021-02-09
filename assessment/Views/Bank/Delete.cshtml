@@ -1,0 +1,86 @@
+﻿@model CrudMVCADO.Models.BankDetail
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BankDetail</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bankId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bankId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bankName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bankName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.accNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.accNo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.basicSal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.basicSal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hRA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hRA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.otherAllowances)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.otherAllowances)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.grossSal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.grossSal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pF)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.medicalPremium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.medicalPremium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tDS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tDS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.netSal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.netSal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.empId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.empId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

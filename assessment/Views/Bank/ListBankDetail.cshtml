@@ -1,0 +1,51 @@
+﻿List of Bank Details
+
+@model System.Data.DataTable
+@{
+    ViewBag.Title = "ListBankDetail";
+
+}
+<table class="table table-bordered table-striped">
+    <tr>
+        <th> BankId</th>
+        <th> Bank Name</th>
+        <th> Account No</th>
+        <th> Basic Salary</th>
+        <th> HRA</th>
+        <th> Other Allowances</th>
+        <th> Gross Salary</th>
+        <th> Account No</th>
+        <th> PF</th>
+        <th> Medical Premium</th>
+        <th> TDS</th>
+        <th> Net Salary</th>
+        <th> EmpId</th>
+    </tr>
+
+    @for (int i = 0; i < Model.Rows.Count; i++)
+    {
+<tr>
+    <!--<!--<td>-->
+    <!--@*<a href="@Url.Action("Index", "Information", new { @id = @Model.Rows[i][0] })">*@--> <!--<!----><!--@*</a>*@-->
+    <!--</td>-->
+
+    <td>@Model.Rows[i][0]</td>
+    <td>@Model.Rows[i][1]</td>
+    <td>@Model.Rows[i][2]</td>
+    <td>@Model.Rows[i][3]</td>
+    <td>@Model.Rows[i][4]</td>
+    <td>@Model.Rows[i][5]</td>
+    <td>@Model.Rows[i][6]</td>
+    <td>@Model.Rows[i][7]</td>
+    <td>@Model.Rows[i][8]</td>
+    <td>@Model.Rows[i][9]</td>
+    <td>@Model.Rows[i][10]</td>
+    <td>@Model.Rows[i][11]</td>
+    <td>@Model.Rows[i][12]</td>
+</tr>
+
+    }
+</table>
+<a href=" @Url.Action("Create","Bank")">Add Bank Detail</a><br>
+<a href=" @Url.Action("Edit","Bank")">Edit Bank Detail</a><br>
+   <a href=" @Url.Action("Delete","Bank")">Delete Bank Detail</a>
